@@ -1,7 +1,7 @@
 #include "grainuum.h"
 #include "kl17.h"
 
-static struct GrainuumUSB defaultUsbPhy = {
+static struct GrainuumUSB usbPhy = {
     /* PTB6 */
     .usbdnIAddr = (uint32_t)&FGPIOB->PDIR,
     .usbdnSAddr = (uint32_t)&FGPIOB->PSOR,
@@ -18,3 +18,13 @@ static struct GrainuumUSB defaultUsbPhy = {
     .usbdpMask = (1 << 5),
     .usbdpShift = 5,
 };
+
+void usbConnectC(void)
+{
+    grainuumConnect(&usbPhy);
+}
+
+void usbDisconnectC(void)
+{
+    grainuumDisconnect(&usbPhy);
+}
