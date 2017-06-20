@@ -8,7 +8,13 @@
     },
     "files": [
         "README.md",
-        "main.ts"
+        "usbhid.ts",
+        "usbhid.c",
+        "grainuum-phy-ll.S",
+        "grainuum-phy.c",
+        "grainuum-state.c",
+        "grainuum.h",
+        "enums.d.ts"
     ],
     "testFiles": [
         "test.ts"
