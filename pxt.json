@@ -1,6 +1,6 @@
 {
-    "name": "ltc-softusb",
-    "version": "0.0.0",
+    "name": "pxt-ltc-softusb",
+    "version": "0.2.1",
     "description": "USB support for the Love-to-Code Chibi Chip",
     "license": "MIT",
     "dependencies": {
@@ -21,5 +21,5 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": true
+    "public": false
 }
