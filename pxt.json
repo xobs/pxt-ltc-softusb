@@ -10,14 +10,16 @@
         "README.md",
         "usbhid.ts",
         "usbhid.c",
+        "makecode-glue.cpp",
         "grainuum-phy-ll.S",
         "grainuum-phy.c",
         "grainuum-state.c",
         "grainuum.h",
+        "kl17.h",
         "enums.d.ts"
     ],
     "testFiles": [
         "test.ts"
     ],
-    "public": false
+    "public": true
 }

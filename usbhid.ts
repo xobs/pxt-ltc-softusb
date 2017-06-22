@@ -4,48 +4,33 @@
 //% weight=5 color=#2699BF icon="\uf110"
 namespace usb {
 
-    //% shim=usbConnectC
     //% parts="usbhid"
+    //% shim=usb::connect
     function usbConnect() {
     }
 
-    //% shim=usbDisconnectC
     //% parts="usbhid"
+    //% shim=usb::disconnect
     function usbDisconnect() {
     }
 
     /**
-     * A USB connection
+     * Simulate plugging in the device.
      */
-    export class USBHID {
-        /**
-         * Send a string to the keyboard.
-         */
-        //% blockId="usbhid_write" block="%usbhid|show" blockGap=8
-        //% weight=79
-        //% parts="usbhid"
-        write(key: string) {
-
-        }
-
-        /**
-         * Simulate plugging in the device.
-         */
-        connect() {
-            usbConnect();
-        }
-
-        /**
-         * Simulate unplugging the device.
-         */
-        disconnect() {
-            usbDisconnect();
-        }
+    //% blockId="usbhid_connect" block="connect USB"
+    //% parts="usbhid"
+    //% weight=85 blockGap=8    
+    export function connect() {
+        usbConnect();
     }
 
-    export function create(): USBHID {
-        let usbhid = new USBHID();
-        usbhid.connect();
-        return usbhid;
+    /**
+     * Simulate unplugging the device.
+     */
+    //% blockId="usbhid_disconnect" block="disconnect USB"
+    //% parts="usbhid"
+    //% weight=85 blockGap=8    
+    export function disconnect() {
+        usbDisconnect();
     }
 }
