@@ -64,8 +64,8 @@ typedef enum IRQn
 #define __MPU_PRESENT             0
 #define __NVIC_PRIO_BITS          2
 #define __Vendor_SysTickConfig    0
-
-#include "core_cm0plus.h"        /* Cortex-M0+ processor and core peripherals */
+#define __IO volatile
+#define __I volatile const
 
 typedef struct
 {
